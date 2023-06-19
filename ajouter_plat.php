@@ -19,18 +19,17 @@ $description = $_POST['descriptionAdd'];
 $image = $_FILES['imageAdd'];
 
 // Chemin de stockage des images
-$uploadDir = "C:/xampp/htdocs/";
-
+$uploadDir = "C:/xampp/htdocs/GestionResto_AvecBD/images";
 // Nom de fichier unique pour éviter les conflits
 $imageName = uniqid() . "_" . $image['name'];
 
 // Chemin complet de l'image
-$imagePath = $uploadDir . $imageName;
+$imagePath = $uploadDir . '/' . $imageName;
 
 // Déplacer l'image vers le répertoire de stockage
 if (move_uploaded_file($image['tmp_name'], $imagePath)) {
     // Requête SQL pour ajouter le plat à la base de données
-    $sql = "INSERT INTO Plats (nomPlat, description, calories, proteines, prix, image) VALUES ('$nomPlat','$protPlat','$description','$caloPlat','$prixPlat','$imageName')";
+    $sql = "INSERT INTO Plats (nomPlat, description, calories, proteines, prix, image) VALUES ('$nomPlat','$description','$caloPlat','$protPlat','$prixPlat','$imageName')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Plat ajouté avec succès";

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<a href="index.html" class="back-link">Aller au site </a>
+<a href="PageAcceuil.html" class="back-link">Aller au site principal</a>
 
   <h1>Gestion des plats</h1>
   <div class="plats-container">

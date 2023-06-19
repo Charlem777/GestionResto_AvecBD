@@ -20,7 +20,7 @@ function loadPlats() {
   xhr.send();
 }
 
-// Fonction pour charger les dÃ©tails d'un plat sÃ©lectionnÃ©
+
 function loadPlatDetails() {
   const platId = document.getElementById("platSelect").value;
   if (platId !== "") {
@@ -30,11 +30,12 @@ function loadPlatDetails() {
       if (xhr.readyState === 4 && xhr.status === 200) {
         const plat = JSON.parse(xhr.responseText);
         document.getElementById("nomPlat").value = plat.nomPlat;
-        document.getElementById("caloPlat").value = plat.caloPlat;
-        document.getElementById("protPlat").value = plat.protPlat;
-        document.getElementById("prixPlat").value = plat.prixPlat;
+        document.getElementById("caloPlat").value = plat.calories;
+        document.getElementById("protPlat").value = plat.proteines;
+        document.getElementById("prixPlat").value = plat.prix;
         document.getElementById("description").value = plat.description;
-        document.getElementById("imageContainer").innerHTML = plat.image ? `<img src="${plat.image}" alt="Plat Image">` : "";
+        document.getElementById("imageContainer").innerHTML = plat.image ? `<img src=images/"${plat.image}" alt="Plat Image">` : "";
+
       }
     };
     xhr.send();
@@ -115,7 +116,6 @@ function addPlat() {
   const caloPlat = document.getElementById("caloPlatAdd").value;
   const protPlat = document.getElementById("protPlatAdd").value;
   const prixPlat = document.getElementById("prixPlatAdd").value;
-  const quantite = document.getElementById("quantiteAdd").value;
   const description = document.getElementById("descriptionAdd").value;
   const image = document.getElementById("imageAdd").files[0];
 

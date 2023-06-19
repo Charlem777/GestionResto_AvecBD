@@ -1,0 +1,543 @@
+/* Styles généraux */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header */
+  nav {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: flex-end;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    top: 20px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  
+  .wrapper--input {
+    position: relative;
+    margin-left: 20px;
+    margin-top: 20px;
+    top: 40%;
+  }
+  
+  input[type="text"] {
+    width: 300px;
+    height: 40px;
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+  }
+  
+ 
+  
+  /* Navigation */
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #f5f5f5;
+    padding: 10px;
+  }
+  
+  nav ul li {
+    position: relative;
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+  }
+  
+  nav ul li a:hover {
+    color: #ff8c00;
+  }
+  
+  nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  nav ul li:hover > ul {
+    display: block;
+  }
+  
+  /* Slideshow */
+  
+  .slideshow {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-image: url("image/couverture.jpeg");
+    animation: defilement-horizontal 30s linear infinite;
+    background-position: -1000vw center;
+  }
+  
+  .promotion {
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 100%;
+    padding: 15px;
+    color: rgba(246, 60, 4, 0.789);
+    text-align: center;
+    font-size: 0.8rem;
+    animation: defilement-horizontal 40s linear infinite, 1s infinite;
+    background-image: url("image/couverture4.jpg");
+    font-weight: bold;
+  }
+  
+  .textR {
+    top: 0%;
+    top: 10%;
+  }
+  
+  @keyframes defilement-horizontal {
+    0% {
+      background-position: -100vw center;
+    }
+    100% {
+      background-position: 100vw center;
+    }
+  }
+  
+  /* Présentation */
+  
+  .presentation {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .presentation__content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .presentation h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .presentation p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .presentation .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff8c00;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .presentation .btn:hover {
+    background-color: #e86f00;
+  }
+  
+  /* Plats */
+  
+  .plats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .plat {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .plat-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .plat-info {
+    text-align: center;
+  }
+  
+  .plat-nom {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .plat-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .plat-details {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .plat-prix {
+    font-size: 18px;
+    color: #ff8c00;
+    margin-bottom: 10px;
+  }
+  
+  .plat-commander {
+    padding: 10px 20px;
+    background-color: #ff8c00;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .plat-commander:hover {
+    background-color: #e86f00;
+  }
+  
+  /* Informations sur le restaurant */
+  
+  .restaurant-info {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .restaurant-info h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .restaurant-info ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .restaurant-info li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .restaurant-info a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .restaurant-info a:hover {
+    color: #ff8c00;
+  }
+  
+  #panier-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #panier {
+    margin-bottom: 10px;
+    display: none;
+  }
+  
+  #panier h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
+  
+  #contenuPanier {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #contenuPanier li {
+    margin-bottom: 5px;
+  }
+  
+  #panierIcone {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  #panierIcone:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .panier {
+    position: relative;
+  }
+  
+  .panier .contenu-panier {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .panier .contenu-panier li {
+    margin-bottom: 10px;
+  }
+  
+  .panier .btn-action {
+    display: inline-block;
+    padding: 5px 10px;
+    border: none;
+    background-color: #eaeaea;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .panier .btn-action:hover {
+    background-color: #ccc;
+  }
+  
+  .panier .message-commande {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  /* Ajoutez ces styles à la fin du fichier style1.css */
+
+.home {
+    position: relative;
+  }
+ 
+  
+  #panierS {
+    size: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    .icone-panier {
+        width: 16px;
+        height: 16px;
+      }
+  }
+  /* Barre de recherche */
+.wrapper--input {
+  position: relative;
+  margin-top: 20px;
+  top: 50px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+/* Logo */
+
+/* Navigation */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  position: relative;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff8c00;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul ul li {
+  width: 200px;
+  margin: 0;
+}
+
+nav ul ul li a {
+  font-size: 14px;
+  padding: 8px;
+}
+
+nav ul ul li a:hover {
+  color: #ff8c00;
+  background-color: #f5f5f5;
+}
+
+/* Recherche */
+
+.search {
+  position: relative;
+  margin-left: 20px;
+}
+
+.search input[type="text"] {
+  width: 200px;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;
+}
+
+.search button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.search button:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.search button:before {
+  content: "\1F50D";
+  font-size: 16px;
+  color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul li {
+    margin-left: 10px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  nav ul ul li a {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .search {
+    margin-left: 10px;
+  }
+
+  .search input[type="text"] {
+    width: 150px;
+    height: 25px;
+    font-size: 12px;
+  }
+}
+
+
